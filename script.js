@@ -29,7 +29,7 @@ let items = [];
 let selectedItems = [];
 
 async function appendtoFirstLayer(){
-    let response = await fetch("http://grocery-store-49.herokuapp.com/get-stock");
+    let response = await fetch("https://grocery-store-49.herokuapp.com/get-stock");
     items = await response.json();
 
     items.forEach(item => {
@@ -218,7 +218,7 @@ sendOrderBtn.addEventListener('click', ()=>{
     packageToServer.itemsToServer = itemsToServer;
 
 
-    fetch("http://grocery-store-49.herokuapp.com/postOrder", {
+    fetch("https://grocery-store-49.herokuapp.com/postOrder", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
