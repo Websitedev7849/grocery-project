@@ -219,9 +219,6 @@ credentialsForm.addEventListener('submit', e=>{
     packageToServer.credArray = credArray;
     packageToServer.itemsToServer = itemsToServer;
 
-    console.log(packageToServer);
-
-
     fetch("https://grocery-store-49.herokuapp.com/postOrder", {
         method: 'POST',
         headers: {
