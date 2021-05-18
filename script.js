@@ -3,6 +3,7 @@ let credentials = document.querySelectorAll('.credentials');
 const bagButton = document.querySelector('.bagButton');
 const editItems = document.querySelector('.edit-items');
 
+const credentialsForm = document.querySelector('.credentials-form');
 const sendOrderBtn = document.getElementById('send-order');
 const orderId = document.querySelector('.order-id');
 const continueShopping = document.querySelector('.continue-shopping');
@@ -184,7 +185,8 @@ confirm.addEventListener('click', ()=>{
     location.hash = "#third-layer";
 });
 
-sendOrderBtn.addEventListener('click', ()=>{
+credentialsForm.addEventListener('submit', e=>{
+    e.preventDefault();
     credentials = Array.from(credentials);
     let credArray = [];
     let itemsToServer = [];
@@ -216,6 +218,8 @@ sendOrderBtn.addEventListener('click', ()=>{
     
     packageToServer.credArray = credArray;
     packageToServer.itemsToServer = itemsToServer;
+
+    console.log(packageToServer);
 
 
     fetch("https://grocery-store-49.herokuapp.com/postOrder", {
