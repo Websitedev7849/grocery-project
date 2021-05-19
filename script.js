@@ -43,7 +43,7 @@ async function appendtoFirstLayer(){
     //function to create div.card element
     function createDivCard(item){
         let divCard = document.createElement('div');
-        divCard.setAttribute('class', 'card m-2');
+        divCard.setAttribute('class', 'card m-2 mt-4');
 
         let img = document.createElement('img');
         img.setAttribute('class', 'card-img-top');

@@ -7,8 +7,6 @@
     --border: 1px solid black
 }
 
-
-
 .center{
     display: flex;
     align-items: center;
@@ -22,6 +20,10 @@
 
 .card{
    width: 18rem;
+   border-radius: 0;
+   border: 1px solid white;
+   box-shadow: 20px 20px 20px #e0dede,
+                -3px -3px 20px #e0dede;
 }
 
 
