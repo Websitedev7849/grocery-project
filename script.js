@@ -15,19 +15,17 @@ const secondLayer = document.querySelector('.second-layer');
 const thirdLayer = document.querySelector('.third-layer');
 const fourthLayer = document.querySelector('.fourth-layer');
 
-secondLayer.classList.remove('d-flex');
+// intit to "#first-layer" hash,
+location.hash = "#first-layer";
+
 secondLayer.classList.add('d-none');
-
-thirdLayer.classList.add('d-none');   
-
-fourthLayer.classList.remove('d-flex');
-fourthLayer.classList.add('d-none');
 
 const confirm = document.querySelector('.confirm');
 
 let items = [];
 
 let selectedItems = [];
+
 
 async function appendtoFirstLayer(){
     let response = await fetch("https://grocery-store-49.herokuapp.com/get-stock");
@@ -101,8 +99,6 @@ async function appendtoFirstLayer(){
 appendtoFirstLayer();
 
 //event listener for monitoring hashes, like router
-// intit to "#first-layer" hash,
-location.hash = "#first-layer";
 window.addEventListener('hashchange', ()=>{
     switch (location.hash) {
         case "#first-layer":
