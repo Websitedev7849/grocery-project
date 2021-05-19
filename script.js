@@ -183,6 +183,7 @@ confirm.addEventListener('click', ()=>{
 
 credentialsForm.addEventListener('submit', e=>{
     e.preventDefault();
+    sendOrderBtn.disabled = true;
     credentials = Array.from(credentials);
     let credArray = [];
     let itemsToServer = [];
@@ -226,6 +227,7 @@ credentialsForm.addEventListener('submit', e=>{
     }).then(obj => {
         orderId.innerText = obj.docId;
         location.hash = "#fourth-layer";
+        sendOrderBtn.disabled = false;
     });
 
 });
