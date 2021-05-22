@@ -1,5 +1,6 @@
 let credentials = document.querySelectorAll('.credentials');
 
+const spinner = document.querySelector('.spinner-border');
 const bagButton = document.querySelector('.bagButton');
 const editItems = document.querySelector('.edit-items');
 
@@ -38,6 +39,8 @@ async function appendtoFirstLayer(){
         }
     });
     
+    spinner.classList.add('d-none');
+
     //function to create div.card element
     function createDivCard(item){
         let divCard = document.createElement('div');
@@ -184,6 +187,7 @@ confirm.addEventListener('click', ()=>{
 credentialsForm.addEventListener('submit', e=>{
     e.preventDefault();
     sendOrderBtn.disabled = true;
+    spinner.classList.remove('d-none');
     credentials = Array.from(credentials);
     let credArray = [];
     let itemsToServer = [];
@@ -228,6 +232,7 @@ credentialsForm.addEventListener('submit', e=>{
         orderId.innerText = obj.docId;
         location.hash = "#fourth-layer";
         sendOrderBtn.disabled = false;
+        spinner.classList.add('d-none');
     });
 
 });

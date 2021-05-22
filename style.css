@@ -7,6 +7,14 @@
     --border: 1px solid black
 }
 
+.spinner-border{
+    position: fixed;
+    top: 2rem;
+    right: auto;
+    left: auto;
+    z-index: 1;
+}
+
 .center{
     display: flex;
     align-items: center;
