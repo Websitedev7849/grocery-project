@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Potato",
+        "qty": 0,
+        "price": 20,
+        "total": "0",
+        "imgSrc": "./images/Potato.jpg",
+        "availibility": "y"
+    },
+    {
+        "name": "Tomato",
+        "qty": 0,
+        "price": 30,
+        "total": 0,
+        "imgSrc": "./images/Tomato.jpg",
+        "availibility": "y"
+    },
+    {
+        "name": "Lasoon",
+        "qty": 0,
+        "price": 10,
+        "total": 0,
+        "imgSrc": "./images/Lasoon.jpg",
+        "availibility": "y"
+    }
+]
